@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Hidden/Postprocess/Grayscale"
+Shader "Hidden/Postprocess/InverseGrayscale"
 {
 	Properties
 	{
@@ -36,6 +36,8 @@ Shader "Hidden/Postprocess/Grayscale"
                 float4 col = tex2D(_MainTex, mainTexUV);
                 float3 grayscale = (col.r + col.g + col.b) * 0.3333f;
                 
+                grayscale = 1 - grayscale;
+                grayscale = pow(grayscale, 2.0f);
                 col.rgb = lerp(col.rgb,  grayscale, _Amount);
                 
                 return col;

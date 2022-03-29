@@ -1,5 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8877499107952852463
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fc77d8988b5c34a949c4f10cc1daf2, type: 3}
+  m_Name: GrayScale
+  m_EditorClassIdentifier: 
+  active: 0
+  IsEnable:
+    m_OverrideState: 1
+    m_Value: 1
+  IsEnable:
+    m_OverrideState: 1
+    m_Value: 1
+  amount:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &-7893295128165547882
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -68,6 +90,53 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-5444154211385877744
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dd361c0f127674c8d27b79483ca1e7, type: 3}
+  m_Name: InverseGrayscale
+  m_EditorClassIdentifier: 
+  active: 1
+  IsEnable:
+    m_OverrideState: 1
+    m_Value: 1
+  amount:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-4555673556547262788
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd22c27c9d41c954d92ccfb0048986d6, type: 3}
+  m_Name: RadialBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  IsEnable:
+    m_OverrideState: 1
+    m_Value: 1
+  amount:
+    m_OverrideState: 1
+    m_Value: 1
+  blurSize:
+    m_OverrideState: 1
+    m_Value: 0.1
+  blurCenterPos:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 8
 --- !u!114 &-4502952401554284947
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -80,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dd361c0f127674c8d27b79483ca1e7, type: 3}
   m_Name: Grayscale
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   IsEnable:
     m_OverrideState: 1
     m_Value: 1
@@ -148,8 +217,9 @@ MonoBehaviour:
   - {fileID: -7893295128165547882}
   - {fileID: -7011558710299706105}
   - {fileID: -2583724965678175921}
-  - {fileID: -4502952401554284947}
-  - {fileID: 3137867206380476698}
+  - {fileID: -8877499107952852463}
+  - {fileID: -5444154211385877744}
+  - {fileID: -4555673556547262788}
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -166,29 +236,3 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 2
---- !u!114 &3137867206380476698
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd22c27c9d41c954d92ccfb0048986d6, type: 3}
-  m_Name: RadialBlur
-  m_EditorClassIdentifier: 
-  active: 1
-  IsEnable:
-    m_OverrideState: 0
-    m_Value: 0
-  amount:
-    m_OverrideState: 0
-    m_Value: 0
-  blurSize:
-    m_OverrideState: 0
-    m_Value: 0.1
-  blurCenterPos: {x: 0.5, y: 0.5}
-  sampleCount:
-    m_OverrideState: 0
-    m_Value: 8

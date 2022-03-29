@@ -7,12 +7,12 @@ using UnityEngine.Rendering.Universal;
 
 public class CustomPostprocessRenderFeature : ScriptableRendererFeature
 {
-    private CustomPostprocessRenderPass<Grayscale> _renderPass = null;
+    private CustomPostprocessRenderPass<InverseGrayscale> _renderPass = null;
     private CustomPostprocessRenderPass<RadialBlur> _renderPass2 = null;
     
     public override void Create()
     {
-        _renderPass = new CustomPostprocessRenderPass<Grayscale>("GrayscalePass", RenderPassEvent.AfterRenderingPostProcessing);
+        _renderPass = new CustomPostprocessRenderPass<InverseGrayscale>("InverseGrayscalePass", RenderPassEvent.AfterRenderingPostProcessing);
         _renderPass2 = new CustomPostprocessRenderPass<RadialBlur>("RadialBlur", RenderPassEvent.AfterRenderingPostProcessing);
     }
 
