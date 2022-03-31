@@ -5,22 +5,22 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-[Serializable, VolumeComponentMenuForRenderPipeline("Custom Post-processing/Grayscale", typeof(UniversalRenderPipeline))]
+[Serializable,
+ VolumeComponentMenuForRenderPipeline("Custom Post-processing/Grayscale", typeof(UniversalRenderPipeline))]
 public class GrayScale : CustomVolumeComponent
 {
     private const string SHADER_NAME = "Hidden/Postprocess/Grayscale";
     private const string PROPERTY_AMOUNT = "_Amount";
-    
+
     private Material _material;
 
-    public BoolParameter IsEnable = new BoolParameter(false);
     public ClampedFloatParameter amount = new ClampedFloatParameter(0f, 0f, 1f);
-    
+
     public override bool IsActive()
     {
         if (IsEnable.value == false) return false;
-        if (!active || 
-            !_material || 
+        if (!active ||
+            !_material ||
             amount.value <= 0.0f) return false;
         return true;
     }
@@ -43,12 +43,12 @@ public class GrayScale : CustomVolumeComponent
         }
     }
 
-    public override void Render(CommandBuffer commandBuffer, ref RenderingData renderingData, RenderTargetIdentifier source, RenderTargetIdentifier destination)
+    public override void Render(CommandBuffer commandBuffer, ref RenderingData renderingData,
+        RenderTargetIdentifier source, RenderTargetIdentifier destination)
     {
         if (!_material) return;
-        
+
         _material.SetFloat(PROPERTY_AMOUNT, amount.value);
-        
         commandBuffer.Blit(source, destination, _material);
     }
 }

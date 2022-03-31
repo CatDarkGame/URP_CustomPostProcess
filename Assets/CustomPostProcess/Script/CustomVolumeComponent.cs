@@ -14,9 +14,9 @@ public abstract class CustomVolumeComponent : VolumeComponent, IPostProcessCompo
     public abstract void Setup();
     public abstract void Destroy();
     public abstract void Render(CommandBuffer commandBuffer, ref RenderingData renderingData, RenderTargetIdentifier source, RenderTargetIdentifier destination);
-    
+   
     protected override void OnDestroy()
     {
-        Destroy();
+        //Destroy();
     }
 }

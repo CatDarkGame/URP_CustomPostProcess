@@ -21,7 +21,6 @@ public class RadialBlur : CustomVolumeComponent
     public FloatParameter blurSize = new FloatParameter(0.1f);
     public Vector2Parameter blurCenterPos = new Vector2Parameter(new Vector2(0.5f, 0.5f));
     public ClampedIntParameter sampleCount = new ClampedIntParameter(8, 1, 48);
-    
 
     public override bool IsActive()
     {
@@ -59,8 +58,11 @@ public class RadialBlur : CustomVolumeComponent
         _material.SetVector(PROPERTY_BLURCENTERPOS, blurCenterPos.value);
         _material.SetFloat(PROPERTY_AMOUNT, amount.value);
         
+        _material.SetFloat(PROPERTY_AMOUNT, amount.value);
+        
         commandBuffer.Blit(source, destination, _material);
     }
+
 }
 
 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8230272675303050901
+--- !u!114 &-1861564537341696321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: CustomPostprocessRenderFeature
   m_EditorClassIdentifier: 
   m_Active: 1
+  _settings:
+    renderTag: CustomPostprocessRender
+    passEvent: 550
 --- !u!114 &-893680048570546550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,8 +45,8 @@ MonoBehaviour:
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
   m_RendererFeatures:
-  - {fileID: -8230272675303050901}
-  m_RendererFeatureMap: 6b31f58f9b32c88d
+  - {fileID: -1861564537341696321}
+  m_RendererFeatureMap: bfa64891ea642ae6
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}

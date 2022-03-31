@@ -15,7 +15,7 @@ public class InverseGrayscale : CustomVolumeComponent
     private Material _material;
 
     public ClampedFloatParameter amount = new ClampedFloatParameter(0f, 0f, 1f);
-
+    
     public override bool IsActive()
     {
         if (IsEnable.value == false) return false;
@@ -48,7 +48,8 @@ public class InverseGrayscale : CustomVolumeComponent
         if (!_material) return;
         
         _material.SetFloat(PROPERTY_AMOUNT, amount.value);
-        
         commandBuffer.Blit(source, destination, _material);
     }
+
+
 }
