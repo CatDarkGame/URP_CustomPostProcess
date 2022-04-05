@@ -29,9 +29,11 @@ public static class RendererUtill
     {
         ScriptableRendererData[] scriptableRendererDatas = GetScriptableRendererDatas();
         if (scriptableRendererDatas == null || scriptableRendererDatas.Length <= 0) return null;
-        
-        UniversalRendererData universalRendererData = scriptableRendererDatas[rendererListIndex] as UniversalRendererData;
+
+        UniversalRendererData universalRendererData =
+            scriptableRendererDatas[rendererListIndex] as UniversalRendererData;
         return universalRendererData;
     }
-    
 }
+
+
